@@ -1,0 +1,21 @@
+import motor
+import runloop
+from hub import port
+
+async def main():
+    # E = left wheel, D = right wheel, C = Stick arm, F = Grabber arm
+    motor.run_for_degrees(port.E, -800, -600)
+    await motor.run_for_degrees(port.D, 800, -600)
+    await motor.run_for_degrees(port.E, -140, 360)
+    motor.run_for_degrees(port.E, -360, -360)
+    await motor.run_for_degrees(port.D, 360, -360)
+    await motor.run_for_degrees(port.F, 500, 500)
+    await motor.run_for_degrees(port.F, -360, 360)
+""" motor.run_for_degrees(port.E, -60, 720)
+    await motor.run_for_degrees(port.D, 60, -720)
+    await motor.run_for_degrees(port.E, 80,-720)
+    await motor.run_for_degrees(port.E, -960, 720)
+    motor.run_for_degrees(port.D, 960, -720)
+    await motor.run_for_degrees(port.D, 150, -360)
+"""
+runloop.run(main())
