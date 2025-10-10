@@ -3,25 +3,26 @@ from hub import port
 import runloop
 #port e left wheel port d right wheel port c- right arm to go straight port d negative to go bach port c negative
 async def main():
-    
+
     motor.run_for_degrees(port.E, 420, 720)
     await motor.run_for_degrees(port.D, -420, 720)
 
     await motor.run_for_degrees(port.E, 450, 1000) #end of first mission
 
-    motor.run_for_degrees(port.E, 178, 720)
-    await motor.run_for_degrees(port.D, -178, 720)
+    motor.run_for_degrees(port.E, 100, 720)
+    await motor.run_for_degrees(port.D, -100, 720)
+    
 
-    await motor.run_for_degrees(port.E, -180, 720)
+    await motor.run_for_degrees(port.D, -180, 720)
 
-    motor.run_for_degrees(port.E,280, 720)
-    await motor.run_for_degrees(port.D, -280, 720)
+    motor.run_for_degrees(port.E,150, 720)
+    await motor.run_for_degrees(port.D, -150, 720)
 
     await motor.run_for_degrees(port.E, -170, 720)
 
     await motor.run_for_degrees(port.C, -520, 720)
-    await motor.run_for_degrees(port.C, 520, 720) 
-
+    await motor.run_for_degrees(port.C, 520, 720)
+    
     motor.run_for_degrees(port.D, 270, 720)
     await motor.run_for_degrees(port.E, -270, 720)
 
@@ -29,5 +30,5 @@ async def main():
 
     motor.run_for_degrees(port.E, 400, 720)
     await motor.run_for_degrees(port.D, -400, 720)
-
+    
 runloop.run(main())
