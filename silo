@@ -1,0 +1,17 @@
+from hub import port, light_matrix
+import motor
+import runloop
+
+async def main():
+    motor.run_for_degrees(port.E, 367, 720)
+    await motor.run_for_degrees(port.D, -367, 720)
+    
+    for x in range(3):
+        await motor.run_for_degrees(port.C, -1000, 3000)
+        await light_matrix.write('6')
+        await motor.run_for_degrees(port.C, 1000, 2000)
+    motor.run_for_degrees(port.E, -367, 720)
+    await motor.run_for_degrees(port.D, 367, 720)
+
+
+runloop.run(main())
