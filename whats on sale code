@@ -1,0 +1,34 @@
+import motor
+import runloop
+from hub import port
+from hub import light_matrix
+
+
+async def main():
+    # E = left wheel, D = right wheel, C = Stick arm, F = Grabber arm
+    motor.run_for_degrees(port.E, -800, -600)
+    await motor.run_for_degrees(port.D, 800, -600)
+    await motor.run_for_degrees(port.E, -120, 360)
+    motor.run_for_degrees(port.E, -320, -360)
+    await motor.run_for_degrees(port.D, 300, -360)
+    '''
+    await motor.run_for_degrees(port.F, -360, 360)
+    await light_matrix.write('67')
+    await motor.run_for_degrees(port.F, 500, 500)
+    '''
+    await motor.run_for_degrees(port.E, 60, -720)
+    motor.run_for_degrees(port.D, -920, 720)
+    await motor.run_for_degrees(port.E, 920,720)
+    await motor.run_for_degrees(port.E, 150, -720)
+    #motor.run_for_degrees(port.F, 1000, 2000)
+    await motor.run_for_degrees(port.C, -2000, 2000)
+    motor.run_for_degrees(port.D, -300, 720)
+    await motor.run_for_degrees(port.E, 300,720)
+    motor.run_for_degrees(port.D, 300, 720)
+    await motor.run_for_degrees(port.E, -300,720)
+    await motor.run_for_degrees(port.C, 360,720)
+    motor.run_for_degrees(port.D, -300, 720)
+    await motor.run_for_degrees(port.E, 300,720)
+    
+    motor.run_for_degrees(port.C, 720,720)
+runloop.run(main())
