@@ -1,10 +1,11 @@
+
 from hub import port, motion_sensor
 import motor
 import runloop
 async def main():
     motor.run_for_degrees(port.E, 2000, 720)
     await motor.run_for_degrees(port.D, -2000, 720)
-    await motor.run_for_degrees(port.D, 230, 720)
+    await motor.run_for_degrees(port.D, 190, 720)
     motor.run_for_degrees(port.E, 300, 720)
     motor.run_for_degrees(port.D, -300, 720)
 runloop.run(main())
