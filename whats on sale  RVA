@@ -1,0 +1,14 @@
+import motor
+from hub import port
+import runloop
+from hub import light_matrix
+#port e right wheel port d left wheel port c- right arm to go straight port d negative to go forward port c negative
+async def main():
+
+    motor.run_for_degrees(port.E, 360, 720)
+    await motor.run_for_degrees(port.D, -360, 720)
+    await motor.run_for_degrees(port.E, 200, 720)
+    motor.run_for_degrees(port.E, -500, 720)
+    await motor.run_for_degrees(port.D, 500, 720)
+runloop.run(main())
+    
