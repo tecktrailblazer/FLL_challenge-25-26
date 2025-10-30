@@ -1,3 +1,4 @@
+
 import motor
 import runloop
 from hub import port
@@ -6,28 +7,28 @@ from hub import light_matrix
 
 async def main():
     # E = left wheel, D = right wheel, C = Stick arm, F = Grabber arm
-    motor.run_for_degrees(port.E, -700, -720)
-    await motor.run_for_degrees(port.D, 700, -720)
+    motor.run_for_degrees(port.E, -760, -720)
+    await motor.run_for_degrees(port.D, 760, -720)
 
-    await motor.run_for_degrees(port.E, -140, 720)
+    await motor.run_for_degrees(port.E, -155, 720)
 
     motor.run_for_degrees(port.E, -290, -720)
     await motor.run_for_degrees(port.D, 270, -720)
-   
-   
+
+
     '''
     await motor.run_for_degrees(port.F, -360, 360)
     await light_matrix.write('67')
     await motor.run_for_degrees(port.F, 500, 500)
     '''
-    
-    
-    
-    
-    await motor.run_for_degrees(port.E, 49, -720)
 
-    motor.run_for_degrees(port.D, -920, 720)
-    await motor.run_for_degrees(port.E, 920,720)
+
+
+
+    await motor.run_for_degrees(port.E, 50, -720)
+
+    motor.run_for_degrees(port.D, -940, 720)
+    await motor.run_for_degrees(port.E, 940,720)
 
     await motor.run_for_degrees(port.E, 125, -720)
 
@@ -36,15 +37,22 @@ async def main():
 
 
     await motor.run_for_degrees(port.C, -2000, 2000)
+    motor.run_for_degrees(port.D, 70, 720)
+    await motor.run_for_degrees(port.E, -70,720)
+
 
     motor.run_for_degrees(port.D, -315, 720)
     await motor.run_for_degrees(port.E, 315,720)
 
-    motor.run_for_degrees(port.D, 200, 2500)
-    await motor.run_for_degrees(port.E, -200, 2500)
-    await motor.run_for_degrees(port.E, 25, 720)
+    motor.run_for_degrees(port.D, 250, 2500)
+    await motor.run_for_degrees(port.E, -250, 2500)
+    await motor.run_for_degrees(port.E, 40, 720)
+    motor.run_for_degrees(port.D, 40, 2500)
+    await motor.run_for_degrees(port.E, -40, 2500)
     await motor.run_for_degrees(port.C, 2000, 2000)
-    await motor.run_for_degrees(port.E, -45, 720)
+    await motor.run_for_degrees(port.E, -50, 720)
+    motor.run_for_degrees(port.D, -45, 720)
+    await motor.run_for_degrees(port.E, 45,720)
     await motor.run_for_degrees(port.C, -720, 720)
 
 
