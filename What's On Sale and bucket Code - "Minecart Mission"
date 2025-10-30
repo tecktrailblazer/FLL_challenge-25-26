@@ -25,7 +25,7 @@ async def main():
 
 
 
-    await motor.run_for_degrees(port.E, 50, -720)
+    await motor.run_for_degrees(port.E, 45, -720)
 
     motor.run_for_degrees(port.D, -940, 720)
     await motor.run_for_degrees(port.E, 940,720)
