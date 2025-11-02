@@ -25,18 +25,18 @@ async def main():
 
 
 
-    await motor.run_for_degrees(port.E, 65, -720)
+    await motor.run_for_degrees(port.E, 57, -720)
 
     motor.run_for_degrees(port.D, -900, 720)
     await motor.run_for_degrees(port.E, 900,720)
 
-    await motor.run_for_degrees(port.E, 120, -720)
+    await motor.run_for_degrees(port.E, 142, -720)
 
-    motor.run_for_degrees(port.D, 120, 720)
-    await motor.run_for_degrees(port.E, -120,720)
+    motor.run_for_degrees(port.D, 135, 720)
+    await motor.run_for_degrees(port.E, -135,720)
 
 
-    await motor.run_for_degrees(port.C, -2000, 2000)
+    await motor.run_for_degrees(port.C, -720, 2000)
 
 
 
@@ -48,9 +48,9 @@ async def main():
     
     
     motor.run_for_degrees(port.E, 40, -720)
-    motor.run_for_degrees(port.D, -40, -720)
-    await motor.run_for_degrees(port.C, 2000, 2000)
-    await motor.run_for_degrees(port.E, -40, -720)
+    await motor.run_for_degrees(port.D, -40, -720)
+    await motor.run_for_degrees(port.C, 720, 720)
+    await motor.run_for_degrees(port.E, 40, -720)
     await motor.run_for_degrees(port.C, -2000, 2000)
 
 
