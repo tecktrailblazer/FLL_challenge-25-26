@@ -1,36 +1,23 @@
-from hub import port
 import motor
+from hub import port
 import runloop
+from hub import light_matrix
+#port e right wheel port d left wheel port c- right arm to go straight port d negative to go forward port c negative
 async def main():
 
-    motor.run_for_degrees(port.E, 1110, 720)
-    await motor.run_for_degrees(port.D, -1110, 720)
+    motor.run_for_degrees(port.E, 705, 720)
+    await motor.run_for_degrees(port.D, -747, 720)
 
-    await motor.run_for_degrees(port.E, -107, 720)
+    await motor.run_for_degrees(port.E, 200, 2067)
 
-    motor.run_for_degrees(port.E, -70, 720)
-    await motor.run_for_degrees(port.D, 70, 720)
+    await motor.run_for_degrees(port.E, -180, 670)
 
-    await motor.run_for_degrees(port.C, -1000, 720)
+    motor.run_for_degrees(port.E, -400, 720)
+    await motor.run_for_degrees(port.D, 400, 720)
 
-    motor.run_for_degrees(port.E, 160, 720)
-    await motor.run_for_degrees(port.D, -140, 720)
-
-    motor.run_for_degrees(port.E, -90, 720)
-    await motor.run_for_degrees(port.C, 500, 1000)
-
-    
-    motor.run_for_degrees(port.E, -100, 720)
     await motor.run_for_degrees(port.D, 100, 720)
-    
-    await motor.run_for_degrees(port.D, 150, 720)
 
-    motor.run_for_degrees(port.E, 600, 720)
-    await motor.run_for_degrees(port.D, -600, 720)
+    motor.run_for_degrees(port.E, -550, 720)
+    await motor.run_for_degrees(port.D, 550, 720)
 
-    await motor.run_for_degrees(port.D, 150, 720)
-
-    motor.run_for_degrees(port.E, 600, 720)
-    motor.run_for_degrees(port.D, -600, 720)
-    
 runloop.run(main())
