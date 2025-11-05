@@ -3,7 +3,7 @@ import motor
 import runloop
 async def main():
 
-    motor.run_for_degrees(port.E, 1100, 720)
+    motor.run_for_degrees(port.E, 1080, 720)
     await motor.run_for_degrees(port.D, -1110, 720)
 
     await motor.run_for_degrees(port.E, -107, 720)
