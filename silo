@@ -3,15 +3,15 @@ import motor
 import runloop
 
 async def main():
-    motor.run_for_degrees(port.E, 290, 300)
-    await motor.run_for_degrees(port.D, -290, 300)
+    motor.run_for_degrees(port.E, 340, 300)
+    await motor.run_for_degrees(port.D, -340, 300)
 
-    for x in range(4):
-        await motor.run_for_degrees(port.F, -720, 3000)
+    for x in range(3):
+        await motor.run_for_degrees(port.F, 300, 820)
         await light_matrix.write('6')
-        await motor.run_for_degrees(port.F, 720, 2000)
-    motor.run_for_degrees(port.E, -267, 720)
-    await motor.run_for_degrees(port.D, 2, 720)
+        await motor.run_for_degrees(port.F, -300, 600)
+    motor.run_for_degrees(port.E, -300, 720)
+    await motor.run_for_degrees(port.D, 300, 720)
 
 
 runloop.run(main())
