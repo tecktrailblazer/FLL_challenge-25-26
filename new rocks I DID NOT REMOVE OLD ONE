@@ -6,37 +6,34 @@ from hub import light_matrix
 #port e right wheel port d left wheel port c- right arm to go straight port d negative to go forward port c negative
 async def main():
 
-    motor.run_for_degrees(port.E, 300, 480)
-    await motor.run_for_degrees(port.D, -300, 480)
+    motor.run_for_degrees(port.E, 320, 480)
+    await motor.run_for_degrees(port.D, -320, 480)
 
-    #await light_matrix.write('674167')
-    await motor.run_for_degrees(port.E, 30, 2500)
     
-    #await light_matrix.write('674167')
-    motor.run_for_degrees(port.E, 350, 680)
-    await motor.run_for_degrees(port.D, -350, 480)
-
-    #await light_matrix.write('674167')
-    await motor.run_for_degrees(port.E, -70, 2500)
-
-    #await light_matrix.write('674167')
-    motor.run_for_degrees(port.E, 120, 680)
-    await motor.run_for_degrees(port.D, -120, 480)
-
-    #await light_matrix.write('674167')
-    await motor.run_for_degrees(port.E, 400, 6700)
-
-    #await light_matrix.write('674167')
-    await motor.run_for_degrees(port.E, -140, 480)
-    '''
-    motor.run_for_degrees(port.E, -400, 720)
-    await motor.run_for_degrees(port.D, 400, 720)
-    
-    await motor.run_for_degrees(port.D, 120, 720)
+    await motor.run_for_degrees(port.E, 40, 2500)
     
     
-    motor.run_for_degrees(port.E, -550, 680)
-    await motor.run_for_degrees(port.D, 550, 680)
-    '''
+    motor.run_for_degrees(port.E, 400, 680)
+    await motor.run_for_degrees(port.D, -400, 480)
+
+    
+    await motor.run_for_degrees(port.E, -145, 2500)
+
+    motor.run_for_degrees(port.E, 52, 480)
+    await motor.run_for_degrees(port.D, -52, 480)
+
+    await motor.run_for_degrees(port.E, -20, 480)
+
+    await motor.run_for_degrees(port.E, 390, 720)#turn that hits rocks
+
+    motor.run_for_degrees(port.E, -100, 680)
+    await motor.run_for_degrees(port.D, 100, 720)
+
+    await motor.run_for_degrees(port.E, -170, 720)
+    
+    #starts coming back
+    
+    motor.run_for_degrees(port.E, -820, 8000)
+    await motor.run_for_degrees(port.D, 820, 8000)
 
 runloop.run(main())
