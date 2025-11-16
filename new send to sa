@@ -3,32 +3,32 @@ import motor
 import runloop
 async def main():
 
-    motor.run_for_degrees(port.E, 1080, 720)
-    await motor.run_for_degrees(port.D, -1110, 720)
+    motor.run_for_degrees(port.E, 1000, 720)
+    await motor.run_for_degrees(port.D, -1050, 720)
 
-    await motor.run_for_degrees(port.E, -107, 720)
+    await motor.run_for_degrees(port.E, -75, 720)
 
-    motor.run_for_degrees(port.E, -70, 720)
-    await motor.run_for_degrees(port.D, 70, 720)
+    #motor.run_for_degrees(port.E, -200, 720)
+    #await motor.run_for_degrees(port.D, 200, 720)
+    
+    await motor.run_for_degrees(port.C, 1500, 720)
 
-    await motor.run_for_degrees(port.C, -1000, 720)
+    motor.run_for_degrees(port.E, 90, 720)
+    await motor.run_for_degrees(port.D, -90, 720)
 
-    motor.run_for_degrees(port.E, 160, 720)
-    await motor.run_for_degrees(port.D, -140, 720)
-
-    motor.run_for_degrees(port.E, -80, 720)
-    await motor.run_for_degrees(port.C, 500, 1000)
+    motor.run_for_degrees(port.E, -130, 8000)
+    await motor.run_for_degrees(port.C, -500, 300)#puts statue up
 
 
-    motor.run_for_degrees(port.E, -55, 720)
-    await motor.run_for_degrees(port.D, 55, 720)
+    motor.run_for_degrees(port.E, -40, 720)
+    await motor.run_for_degrees(port.D, 40, 720)
 
-    await motor.run_for_degrees(port.D, 125, 720)
+    await motor.run_for_degrees(port.D, 170, 720)
 
     motor.run_for_degrees(port.E, 600, 720)
     await motor.run_for_degrees(port.D, -600, 720)
 
-    await motor.run_for_degrees(port.D, 180, 720)
+    await motor.run_for_degrees(port.D, 160, 720)
 
     motor.run_for_degrees(port.E, 630, 720)
     motor.run_for_degrees(port.D, -630, 720)
