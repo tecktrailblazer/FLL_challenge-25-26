@@ -1,0 +1,30 @@
+import motor, runloop
+from hub import port
+
+async def main():
+    await motor.run_for_degrees(port.D, -95, 720)
+
+    motor.run_for_degrees(port.E, -300, -720)
+    await motor.run_for_degrees(port.D, 340, -720)
+
+    await motor.run_for_degrees(port.D, -30, -720)
+
+    motor.run_for_degrees(port.E, -400, -720)
+    await motor.run_for_degrees(port.D, 400, -720)
+
+    await motor.run_for_degrees(port.E, -110, -720)
+
+    await motor.run_for_degrees(port.C, 168, 720)
+
+    motor.run_for_degrees(port.E, -180, 6700)#turn hitting thing off
+
+    motor.run_for_degrees(port.C, -150, 100)
+
+    await motor.run_for_degrees(port.D, -50, 1000)
+
+    motor.run_for_degrees(port.E, -700, 2000)
+    await motor.run_for_degrees(port.D, 700, 2000)
+
+    #motor.run_for_degrees(port.E, -300, -720)
+    #await motor.run_for_degrees(port.D, 340, -720)
+runloop.run(main())
